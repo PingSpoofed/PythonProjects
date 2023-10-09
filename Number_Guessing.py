@@ -9,7 +9,7 @@ print(f"Guess the number in the range of {low_num} and {higher_num}")
 while True:
     try:
         user_guess: int = int(input('Guess: '))
-        guesses.append([user_guess])
+        guesses.append(user_guess)
     except ValueError as e:
         print("Please enter a valid number")
         continue
@@ -25,5 +25,5 @@ while True:
             break
     else:
         print("You guessed 3 times and its game over")
-        print(f"These wore youre guesses {guesses}")
+        print("These wore youre guesses {0}, {0}, {0}".format(*guesses))
         break
