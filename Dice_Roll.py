@@ -9,9 +9,6 @@ def roll_dice(amount: int = 2) -> list[int]:
         random_roll: int = random.randint(1, 6)
         rolls.append(random_roll)
 
-    Sum = sum(rolls)
-    print(f"{Sum}")
-
     return rolls
 
 def main():
@@ -24,6 +21,7 @@ def main():
                 break
 
             print(*roll_dice(int(user_input)), sep=', ')
+            print("Total value of: ",sum(roll_dice(int(user_input))))
         except ValueError:
             print("Please enter a valid number")
 
